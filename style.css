@@ -1,0 +1,59 @@
+.Ads__header {
+    padding: 24px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.Header__title {
+    display: inline-block;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.Header__button {
+    cursor: pointer;
+    float: right;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 12px;
+    border-radius: 7px;
+    background-color: black;
+    color: white;
+    transition: .25s;
+}
+
+.Header__button:hover {
+    background-color: #616161;
+}
+
+.Ads__content {
+    font-family: 'Roboto', sans-serif;
+    padding: 24px;
+}
+
+.Content__box {
+    margin-left: 50px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color:#0d0d84;
+    border-radius: 8px;
+    display: inline-block;
+    color: white;
+}
+
+.Box__info {
+    line-height: 80px;
+    font-size: 24px;
+    font-weight: 700;
+    padding-bottom: 40px;
+}
+
+.Box__name {
+    font-size: 18px ;
+    line-height: 80px;
+
+}
+
+.Box__phone {
+    padding-bottom: 25px;
+}
