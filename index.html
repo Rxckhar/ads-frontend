@@ -5,24 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-    <div class="Ads__header">
-        <div class="Header__title">Объявления</div>
-        <div class="Header__button">Добавить</div>
-    </div>
-    <div class="Ads__content">
-        <div class="Content__box">
-            <div class="Box__info">Текст объявления 1</div>
-            <div class="Box__name">Имя</div>
-            <div class="Box__phone">+7 (999) 123-45-67</div>
+    
+    <div class="Background">
+        <div class="Ads__header">
+            <div class="Header__title">Объявления</div>
+            <div class="Header__button">Добавить</div>
         </div>
-
-        <div class="Content__box">
-            <div class="Box__info">Текст объявления 2</div>
-            <div class="Box__name">Имя</div>
-            <div class="Box__phone">+7 (999) 123-45-67</div>
+    
+        <div class="Ads__content">
+            <div class="Content__box" id="box" onmouseover="changeItem()" onmouseout="rechangeItem()">   
+                <div class="Box__info" id="info">Текст объявления 1</div>
+                <div class="Box__name" id="name">Имя</div>
+                <div class="Box__phone" id="phone">+7 (999) 123-45-67</div>
+            </div>
+            
+            <div class="Content__box" id="box" onmouseover="changeItem()" onmouseout="rechangeItem()">   
+                <div class="Box__info" id="info">Текст объявления 2</div>
+                <div class="Box__name" id="name">Имя</div>
+                <div class="Box__phone" id="phone">+7 (999) 123-45-67</div>
+            </div>
         </div>
     </div>
+<script src="script.js"></script>
 </body>
 </html>
