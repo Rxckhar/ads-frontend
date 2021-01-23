@@ -1,3 +1,14 @@
-function changeItem() {
-    document.getElementById('box').style.color = 'ffffff00';
-}
+$(document).ready(function() {
+    $('#modal').hide();
+
+$("#add").click(function() {
+    $('#modal').show();
+});
+
+$("#close").click(function() {
+    $('#modal').hide();
+});
+
+
+
+});
