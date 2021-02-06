@@ -114,9 +114,10 @@ html, body {
 }
 
 .Model__form {
+
     padding: 24px;
     border-radius: 12px;
-    background-color: white;
+    background: linear-gradient(to top,#a3a7df, #c0c3ec, #f5f5f5,  #f5f5f5);
     display: inline-block;
     z-index: 2;
 }
