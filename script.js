@@ -15,16 +15,30 @@ $("#close").click(function() {
 });
 
 $("#newblock").click(function() {
+    // var ad = {
+    //     text: $('textarea[name="text"]').val(),
+    //     contactName: $('input[name="name"]').val(),
+    //     contactPhone: $('input[name="phone"]').val()
+    // }
+
+    // arrayAds.push(ad);
+    // console.log(arrayAds);
+
+    // renderAds();
     var ad = {
         text: $('textarea[name="text"]').val(),
-        contactName: $('input[name="name"]').val(),
-        contactPhone: $('input[name="phone"]').val()
+        name: $('input[name="name"]').val(),
+        phone: $('input[name="phone"]').val()
     }
 
-    arrayAds.push(ad);
-    console.log(arrayAds);
-
-    renderAds();
+    $.ajax({
+        type: 'POST',
+        url: 'http://localhost/api.php?add',
+        data: ad,
+        success: function(data) {
+            initPage();
+        }
+    });
 
 
     
@@ -60,6 +74,33 @@ $("#newblock").click(function() {
 
         
     }
+
+
+    function initPage() {
+        $.ajax({
+            type: 'GET',
+            url: 'http://localhost/api.php?all',
+            success: function(data) {
+                console.log(data);
+
+                data.map(element => {
+
+                    var ad = {
+                        text: element.text,
+                        contactName: element.name,
+                        contactPhone: element.phone
+                    }
+                
+                    arrayAds.push(ad);
+                    console.log(arrayAds);
+                
+                    renderAds();
+                });
+            }
+        });
+    }
+
+    initPage();
 
 });
 
